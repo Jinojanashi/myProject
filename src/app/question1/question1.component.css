@@ -1,0 +1,21 @@
+.first {
+    width: 200px;
+}
+.second {
+    width: calc(100% - 500px);
+    min-width: 100px;
+}
+.third {
+    width: 300px;
+}
+@media only screen and (max-width: 600px) {
+    .first {
+      width: 100%;
+    }
+    .second {
+        width: 100%;
+    }
+    .third {
+        width: 100%;
+    }
+  }
