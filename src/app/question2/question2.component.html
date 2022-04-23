@@ -1,1 +1,18 @@
-<button routerLink="/q1">previous question</button>
+<input type="text" class="form-control" style="width: 50%; margin: 20px;" placeholder="Search data..." [(ngModel)]="value">
+<div class="card" style="margin: 20px;">
+    <div class="col-12 table-height" style="overflow:auto; margin:4px">  
+      <table class="table">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">Categories</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of records  | filter:value">
+            <th scope="row">{{record}}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button type="button" style="float:right; margin-right: 20px;" class="btn btn-primary" routerLink="/q1">previous question</button>

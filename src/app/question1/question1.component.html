@@ -1,18 +1,15 @@
 <form class="row">
   <div class="first">
-    <label for="inputNumber" class="form-label">Number</label>
     <input type="number" class="form-control" name="inputNumber" [(ngModel)]="value" (ngModelChange)="calculate()">
   </div>
   <div class="second">
-    <label for="inputState" class="form-label">State</label>
-    <select name="inputState" class="form-select" [(ngModel)]="cal" (change)="calculate()">
+    <select name="inputCal" class="form-select" [(ngModel)]="cal" (change)="calculate()">
       <option value="p">isPrime</option>
       <option value="f">isFibonacci</option>
     </select>
   </div>
   <div class="third">
-    <label for="inputZip" class="form-label">Answer</label>
-    <div class="form-control" id="inputZip">{{ answer }}</div>
+    <div>{{ answer }}</div>
   </div>
 </form>
-<button type="button" class="btn btn-primary">next question</button>
+<button type="button" class="btn btn-primary" style="float:right; margin-top: 20px;" routerLink="/q2">next question</button>
