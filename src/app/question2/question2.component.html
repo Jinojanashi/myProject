@@ -1,4 +1,4 @@
-<input type="text" class="form-control" style="width: 50%; margin: 20px;" placeholder="Search data..." [(ngModel)]="value">
+<input type="text" class="form-control" style="width: 50%; margin: 20px;" placeholder="Search data..." [(ngModel)]="value" (ngModelChange)="filter()">
 <div class="card" style="margin: 20px;">
     <div class="col-12 table-height" style="overflow:auto; margin:4px">  
       <table class="table">
@@ -8,7 +8,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let record of records  | filter:value">
+          <tr *ngFor="let record of records">
             <th scope="row">{{record}}</th>
           </tr>
         </tbody>

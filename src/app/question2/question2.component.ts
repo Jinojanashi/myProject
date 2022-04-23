@@ -8,7 +8,8 @@ import { CatagoriesDataService } from '../service/catagories-data.service';
 export class Question2Component implements OnInit {
 
   value: string = ""
-  records: Array<[]> = []
+  mock: string[] = []
+  records: string[] = []
 
   constructor(private dataService : CatagoriesDataService) {
 
@@ -22,12 +23,13 @@ export class Question2Component implements OnInit {
     this.dataService.getData().subscribe(result => {
       let resp = JSON.parse(JSON.stringify(result))
       this.records = resp.categories
+      this.mock = this.records
     })
   }
 
-  // filter() {
-  //   if(this.value === "") console.log('aaa')
-  //   else this.records.filter(res => res == this.value);
-  //   console.log(this.value)
-  // }
+  filter() {
+    var pattern = this.value;
+    if(pattern == "") this.records = this.mock;
+    this.records = this.records.filter(str => str.includes(pattern));
+  }
 }
