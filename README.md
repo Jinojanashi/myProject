@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
+# After clone git
+
+1. enter your directory to this repo by `cd yourDir` on terminal
+2. Run `npm start` on your terminal
+3. run `ng serve` this website run in `http://localhost:4200/`.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
